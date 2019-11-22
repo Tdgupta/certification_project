@@ -1,0 +1,40 @@
+<html>
+    
+    <% include ../partials/head %>
+    <style>
+    .card {
+        width: 40%;
+        margin: 5% auto;
+    }
+    </style>
+    <body>
+        <div class="card">
+            <div class="card-body">
+                <h3>Edit item</h3>
+                <br />
+                <% if(error) { %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <%= error %>
+                      </div>
+                      <% }%>
+                      
+                <form method="POST" action="/api/admins/editnews">
+                    <input type="hidden" value="<%= news._id%>" name="id">
+                    <div class="form-group">
+                        <input type="text" value="<%= news.title%>" class="form-control"  name="title" placeholder="title" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" value="<%= news.description%>" class="form-control" name="description" placeholder="description" required>
+                    </div>
+                    <div class="form-group">
+                            <input type="text" value="<%= news.url%>" class="form-control" name="url" placeholder="url" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" value="<%= news.imageurl%>" class="form-control" name="imageurl" placeholder="imageurl" required>
+                </div>
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                  </form>
+            </div>
+          </div>
+    </body>
+</html>

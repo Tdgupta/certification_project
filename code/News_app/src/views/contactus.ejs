@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>New App</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+<style>
+  .card {
+      width: 30%;
+      margin: 5% auto;
+  }
+  </style>
+<body>
+  <% include ./partials/header %>
+  <div class="card">
+    <div class="card-body">
+        <h3>Contact us</h3>
+        <br />
+        <% if(error) { %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <%= error %>
+              </div>
+              <% }%>
+        <form method="POST" action="/sendmail" method="POST">
+            <div class="form-group">
+                <input type="text" class="form-control"  name="email" placeholder="email">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="query" placeholder="Query">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+  </div>
+              <footer class="footer mt-auto py-3 bg-dark">
+                    
+                      <span>&copy;&nbsp;&nbsp;2019 All rights reserved. </span>
+                    
+                  </footer>
+</body>
+</html>

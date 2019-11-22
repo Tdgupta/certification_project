@@ -1,0 +1,38 @@
+<html>
+    
+    <% include ../partials/head %>
+    <style>
+    .card {
+        width: 50%;
+        margin: 5% auto;
+    }
+    </style>
+    <body>
+        <div class="card">
+            <div class="card-body">
+                <h3>Register</h3>
+                <br />
+                <% if(error) { %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <%= error %>
+                      </div>
+                      <% }%>
+                      <% if(msg) { %>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <%= msg %>
+                              </div>
+                              <% }%>
+                <form method="POST" action="/api/admins/register">
+                    <div class="form-group">
+                        <input type="text" class="form-control"  name="username" placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+
+                  </form>
+            </div>
+          </div>
+    </body>
+</html>

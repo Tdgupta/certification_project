@@ -1,0 +1,212 @@
+.footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    z-index: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+div,
+input {
+    outline: none;
+    border: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+
+}
+
+#chatWindow {
+    height: 400px;
+    position: relative;
+    top: 5px;
+    left: 2px;
+    overflow: scroll;
+
+}
+
+#mainWrapper {
+    display: none;
+    overflow: auto;
+}
+
+#chatWrapper {
+
+    vertical-align: bottom;
+    background: #F8F3D4;
+    padding: auto;
+    box-shadow: 0 0 10px black inset;
+    display: block;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.msgcontent {
+
+    padding: 20px 20px;
+    z-index: 0;
+    display: block;
+    text-overflow: break-word;
+    border-radius: 20px;
+
+}
+
+#userWrapper {
+
+
+    background: #f4f4f4;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    height: auto;
+    position: relative;
+    bottom: 0px;
+    top: 10px;
+
+}
+
+#namesWrapper {
+
+
+    background: #f4f4f4;
+    padding: 10px;
+    position: relative;
+    top: 200px;
+    width: 100%;
+
+}
+
+input {
+    height: 50px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#messageForm {
+
+    top: 500x;
+    width: 100%;
+
+}
+
+.username {
+    width: 100%;
+    max-width: 750px;
+    float: left;
+
+
+}
+
+.jumbotron {
+    background: #F6416C;
+    overflow: auto;
+    border-radius: 0px;
+
+
+}
+
+.jumbo {
+    transition: all 0.2s;
+}
+
+input[type="submit"] {
+    background: rgb(98, 87, 114);
+    color: white;
+    padding: 20;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+}
+
+input[type="submit"]:hover {
+    background: rgba(98, 87, 114, 0.7);
+}
+
+/* UPDATED for Radhika */
+.container {
+    /* margin: 0 auto; */
+    /* width: 100%;
+    max-width: 1000px; */
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    right: 0;
+    right: -15px;
+    bottom: 9px;
+}
+
+#namesWrapper {
+    top: 0px;
+}
+
+#mainWrapper {
+    border-radius: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+    .jumbotron .h1,
+    .jumbotron h1 {
+        font-size: 21px;
+    }
+
+    .container .jumbotron,
+    .container-fluid .jumbotron {
+        padding-right: 35px;
+        padding-left: 35px;
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+}
+
+h2#currentuser {
+    font-size: 13px;
+    padding: 11px 10px !important;
+    background: #FFDE7D;
+}
+
+#chatWindow {
+    height: 200px;
+}
+
+div#chatWindow h4 {
+    font-size: 12px;
+}
+
+.msgcontent {
+    padding: 12px;
+    z-index: 0;
+    display: block;
+    text-overflow: break-word;
+    border-radius: 6px;
+    font-size: 10px !important;
+}
+
+#messageForm {
+    display: flex;
+}
+
+.username {
+    height: 34px;
+}
+
+form#messageForm input {
+    font-size: 12px;
+}
+
+form#messageForm input[type="submit"] {
+    height: auto;
+    padding: 12px;
+    width: auto;
+}
